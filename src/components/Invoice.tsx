@@ -4,6 +4,7 @@ import BillTo from './BillTo'
 import InvoiceNo from './InvoiceNo'
 import InvoiceItemsTable from './InvoiceItemsTable'
 import InvoiceThankYouMsg from './InvoiceThankYouMsg'
+import logo from '/react.png'
 
 const styles = StyleSheet.create({
   page: {
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
 const Invoice = ({ invoice }: any) => (
   <Document>
     <Page size="A4" style={styles.page}>
-      {/* <Image style={styles.logo} src={logo} /> */}
+      <Image style={styles.logo} src={logo} />
       <InvoiceTitle title="Invoice" />
       <InvoiceNo invoice={invoice} />
       <BillTo invoice={invoice} />
