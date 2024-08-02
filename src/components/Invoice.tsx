@@ -24,17 +24,19 @@ const styles = StyleSheet.create({
   }
 })
 
-const Invoice = ({ invoice }: any) => (
-  <Document>
-    <Page size="A4" style={styles.page}>
-      <Image style={styles.logo} src={logo} />
-      <InvoiceTitle title="Invoice" />
-      <InvoiceNo invoice={invoice} />
-      <BillTo invoice={invoice} />
-      <InvoiceItemsTable invoice={invoice} />
-      <InvoiceThankYouMsg />
-    </Page>
-  </Document>
-)
+function Invoice({ invoice }: any) {
+  return (
+    <Document>
+      <Page size="A4" style={styles.page}>
+        <Image style={styles.logo} src={logo} />
+        <InvoiceTitle title="Invoice" />
+        <InvoiceNo invoice={invoice} />
+        <BillTo invoice={invoice} />
+        <InvoiceItemsTable invoice={invoice} />
+        <InvoiceThankYouMsg />
+      </Page>
+    </Document>
+  )
+}
 
 export default Invoice

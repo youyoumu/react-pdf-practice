@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     fontStyle: 'bold'
   },
   label: {
-    width: 60
+    width: 90
   }
 })
 
